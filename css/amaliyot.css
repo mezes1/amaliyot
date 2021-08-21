@@ -16,6 +16,8 @@ label
     font-size: 27px;
     font-weight: bolder;
     position: relative;
+    width: 93px;
+    cursor: pointer;
 }
 span
 {
@@ -51,4 +53,10 @@ input:checked + span
 input:checked + span:after 
 {
     display: block;
+}
+input 
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
