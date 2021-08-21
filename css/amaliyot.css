@@ -9,7 +9,7 @@
 }
 .form-control
 {
-    width: 85px;
+    width: 76px;
     display: block;
     position: relative;
     padding-left: 36px;
@@ -28,36 +28,42 @@ h1
     top: 0;
     height: 24px;
     width: 24px;
-    background-color: #ddd;
+    background-image: linear-gradient(250deg, rgb(214, 214, 214), rgb(121, 121, 121));
+    box-shadow: -3px 3px 6px rgb(75 75 75);
+    border: 1px solid rgb(110, 110, 110);
     border-radius: 50%;
 }
-.form-control:hover input ~ .custom-radio
+.form-control:hover input + .custom-radio
 {
     background-color: #ccc;
 }
-.form-control input:checked ~ .custom-radio
+.form-control input:checked + .custom-radio
 {
     background-color: #2d846e;
+    background-image: none;
+    box-shadow: -3px 3px 6px #2d846e;
+    border: 1px solid #216151;
 }
 .custom-radio:after
 {
-    top: 8px;
-    left: 8px;
-    width: 8px;
-    height: 8px;
+    top: 7px;
+    left: 7px;
+    width: 11px;
+    height: 11px;
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
     content: "";
     position: absolute;
     display: none;
 }
-.form-control input:checked ~ .custom-radio:after
+.form-control input:checked + .custom-radio:after
 {
     display: block;
+    background-image: none;
 }
 .form-control input 
 {
+    cursor: pointer;
     position: absolute;
     opacity: 0;
-    cursor: pointer;
 }
